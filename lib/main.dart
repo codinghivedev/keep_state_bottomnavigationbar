@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  int _selectedIndex = 0;
+  int _selectedPage = 0;
   List<Widget> pageList = List<Widget>();
 
   @override
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: IndexedStack(
-        index: _selectedIndex,
+        index: _selectedPage,
         children: pageList,
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text('Second Page'),
           ),
         ],
-        currentIndex: _selectedIndex,
+        currentIndex: _selectedPage,
         selectedItemColor: Colors.blue,
         onTap: _onItemTapped,
       ), // This trailing comma makes auto-formatting nicer for build methods.
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;
+      _selectedPage = index;
     });
   }
 }
