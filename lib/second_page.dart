@@ -31,7 +31,7 @@ class _SecondPageState extends State<SecondPage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35.0,color: Colors.blue),
             ),
           ],
         ),
